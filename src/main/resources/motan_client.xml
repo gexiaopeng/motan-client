@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:motan="http://api.weibo.com/schema/motan"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+   http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd">
+    <motan:basicReferer id="clientBasicConfig" group="motan-demo-rpc" module="motan-demo-rpc"  />
+    <!-- reference to the remote service -->
+    <motan:referer id="remoteService" interface="com.gxp.service.FooService"   basicReferer="clientBasicConfig" directUrl="localhost:8002"/>
+    <motan:referer id="userService" interface="com.gxp.service.UserService"   basicReferer="clientBasicConfig" directUrl="localhost:8002"/>
+</beans>
