@@ -44,6 +44,11 @@
 	<artifactId>spring-web</artifactId>
 	<version>4.2.4.RELEASE</version>
 </dependency>
+<dependency>
+    <groupId>com.weibo</groupId>
+    <artifactId>motan-registry-zookeeper</artifactId>
+    <version>0.0.1</version>
+</dependency>
   </dependencies>
   <build>
     <finalName>motan-client</finalName>
